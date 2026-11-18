@@ -74,9 +74,6 @@ Cross-seed summaries and figures: `scripts/model_comparison/compare_models.py`,
 python -m pytest tests
 ```
 
-## Citation
-
-Steidl, V., Li, T., Mitcham, T., Xiong, Z., Bamber, J., Zhu, X. X.: Seasonal Forecasting of Marine-Terminating Glacier Calving Fronts in 2D With Deep Learning.
 
 ## License
 
