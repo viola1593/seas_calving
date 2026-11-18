@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Outputs (training runs, figures, logs)
+experiments/
+figures/
+lightning_logs/
+wandb/
+*.ckpt
+*.pt
+*.pth
+*.log
+*.out
+
+# Data (download separately, see README)
+glacier_data/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,16 @@
+# Dataset variable configuration for CalvingFrontDatasetV2.
+# Imagery has been removed from this version of the pipeline.
+# 'sdt' is always required in inputs.spatial.
+
+inputs:
+  spatial:
+    - sdt       # SDT map + sdt_diff (change rate) — always included as a pair
+    - geophys   # bed elevation, surface elevation, thickness, velocity, strain rate (ch 0–4)
+  scalar:
+    - climate   # MAR runoff, ocean temperature
+
+forcings:       # single t+horizon snapshot loaded from target_zarr_index
+  spatial:
+    - geophys   # future geophys — static per glacier; useful if data becomes time-varying
+  scalar:
+    - climate   # MAR runoff and ocean temperature at forecast time

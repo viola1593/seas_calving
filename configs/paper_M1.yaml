@@ -1,0 +1,46 @@
+# Release copy of the dev config configs/paper_M1.yaml with the W&B block removed (training logs to TensorBoard only).
+# Exported as configs/paper_M1.yaml by tools/export_public.sh.
+data:
+  augment_train: false
+  batch_size: 2
+  config:
+    forcings:
+      scalar:
+      - climate
+      spatial: []
+    inputs:
+      scalar:
+      - climate
+      spatial:
+      - sdt
+      - geophys
+      - bed_slope
+  num_workers: 6
+  pin_memory: true
+  splits_dir: ../glacier_data/TrainingDataset_processedV2/splits_seasonal
+  stats_path: ../glacier_data/TrainingDataset_processedV2/splits_seasonal/normalisation_stats.json
+experiment:
+  name: convlstm_seasonal_baseline_bed_slope
+  output_dir: experiments/seasonal
+  run_name: paper_M1_seed0
+  run_test_at_end: true
+  seed: 0
+model:
+  architecture: convlstm_seasonal
+  base_channels: 32
+  hidden_channels: null
+  num_layers: 2
+trainer:
+  accumulate_grad_batches: 4
+  devices:
+  - 0
+  gradient_clip_val: 1.0
+  log_every_n_steps: 20
+  overfit_batches: 0
+  precision: 16-mixed
+training:
+  loss_decay_pixels: 10.0
+  loss_min_weight: 0.0
+  lr: 0.0001
+  max_epochs: 100
+  weight_decay: 0.001
