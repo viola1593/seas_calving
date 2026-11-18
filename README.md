@@ -3,7 +3,7 @@
 Code for **Calving2DModel: seasonal (90-day) forecasting of 2D calving front positions** of Svalbard's marine-terminating glaciers without per-glacier calibration.
 
 > Paper: Steidl, V., Li, T., Mitcham, T., Xiong, Z., Bamber, J., Zhu, X. X.: *Seasonal Forecasting of Marine-Terminating Glacier Calving Fronts in 2D With Deep Learning*, submitted.
-> Data: *TODO Zenodo DOI*
+> Data: 10.5281/zenodo.24341408
 
 The model forecasts calving front displacements as a signed distance field (SDF) of the calving front (SDF=0) over 90 days from five past front positions, geophysical fields (bed and surface elevation, thickness, surface ice speed, strain rate, bed slope) and scalar climate (MAR runoff, ocean temperature). Skill is measured against persistence. This work extends the dataset and preprocessing from CalvingDB (Li et al, 2026a; Li et al, 2026b) to the seasonal forecasting task. 
 
@@ -30,7 +30,7 @@ All commands are run from the repository root.
 
 ## Data
 
-Download the dataset (*TODO DOI*) and unpack it so the configs find it:
+Download the dataset (10.5281/zenodo.24341408) and unpack it so the configs find it:
 
 ```
 ../glacier_data/TrainingDataset_processedV2/
@@ -76,7 +76,7 @@ python -m pytest tests
 
 ## Citation
 
-*TODO BibTeX*
+Steidl, V., Li, T., Mitcham, T., Xiong, Z., Bamber, J., Zhu, X. X.: Seasonal Forecasting of Marine-Terminating Glacier Calving Fronts in 2D With Deep Learning.
 
 ## License
 
